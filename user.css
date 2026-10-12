@@ -1,0 +1,105 @@
+/* Spicetify Monochrome Theme
+   Author: Fameboyq (https://github.com/Fameboyq)
+   License: MIT
+*/
+
+:root {
+  --border-radius: 8px;
+  --transition-speed: 0.2s;
+}
+
+/* Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 120, 120, 0.3) !important;
+  border-radius: 999px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 120, 120, 0.6) !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+/* Main View & Cards */
+.main-view-container__scroll-node-child {
+  padding-bottom: 30px;
+}
+
+.main-card-card {
+  border-radius: var(--border-radius) !important;
+  transition: transform var(--transition-speed) ease, background-color var(--transition-speed) ease !important;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.main-card-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Album Art Rounded Corners */
+.main-card-imageContainer img,
+.main-trackInfo-image img,
+.main-entityHeader-image img {
+  border-radius: var(--border-radius) !important;
+}
+
+/* Top Navigation Bar */
+.main-topBar-container {
+  backdrop-filter: blur(12px) !important;
+  background-color: rgba(10, 10, 10, 0.75) !important;
+}
+
+/* Player Bar at Bottom */
+.main-nowPlayingBar-container {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background-color: var(--spice-player) !important;
+  padding: 0 16px;
+}
+
+/* Progress Bar */
+.playback-bar .progress-bar {
+  --progress-bar-height: 4px;
+  --progress-bar-radius: 2px;
+}
+
+.progress-bar__slider {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background-color: var(--spice-text) !important;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Play/Pause Button */
+.main-playButton-Primary,
+.main-playPauseButton-button {
+  background-color: var(--spice-button) !important;
+  color: var(--spice-main) !important;
+  border-radius: 50% !important;
+  transition: transform 0.15s ease !important;
+}
+
+.main-playButton-Primary:hover,
+.main-playPauseButton-button:hover {
+  transform: scale(1.06) !important;
+}
+
+/* Remove Spotify Upgrade Button & Unnecessary Clutter */
+.main-topBar-UpgradeButton,
+button[title="Upgrade to Premium"] {
+  display: none !important;
+}
+
+/* Sidebar Customization */
+.main-yourLibraryX-navItem,
+.main-navBar-navItem {
+  border-radius: var(--border-radius);
+  margin: 2px 8px;
+}
